@@ -1,0 +1,240 @@
+“KBC GAME”
+Code:
+#include<stdio.h>
+#include<stdlib.h>
+int i=0,j=1,k,p=1;
+char ch1;
+unsigned long score=0,Reward;
+void Chk(char);
+char arr[]={'C','D','A','C','B','B','C','A','C','B','A','A','A','C','A'};
+int main()
+{char ch;
+
+printf("\t\t\tWELCOME\t TO  KBC\n\n");
+printf("U can use following lifelines for one time:\n ");
+printf("1. 50-50 lifline for by pressing 'H'\n ");                              //Lifelines
+printf("2. Audience poll by pressing P\n");                                    // LIfelines
+printf("\n To quit- Press Q");
+
+printf("\nQ1.The first generation of computers were based upon\n"); //Questions start from here
+printf("(A)Transistors\n(B)ICs\n(C)Valves\n(D)Conductor\n");
+printf("Choice=");
+scanf("%c",&ch);
+Chk(ch);
+
+printf("\nQ2.RAM is a type of \n(A)Volatile Memory\n(B)Primary Memory\n(C)Temporary Memory\n(D)All of these\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ3.Analog Computers work in the supply of\n");
+printf("(A)Continuous Electrical pulses\n");
+printf("(B)Non continuous Electrical Supply\n");
+printf("(C)Magnetic Strength\n");
+printf("(D)Physical Strength\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ4.The first electric computer in the world was.\n");
+printf("(A)UNIVAC\n(B)EDIVAC\n(C)ENIAC\n(D)All of these\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ5.Laser is a type of \n");
+printf("(A)Input device\n");
+printf("(B)Output device\n");
+printf("(C)Memory device\n");
+printf("(D)Processing Device\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ6.How many states does India have ?\n");
+printf("(A)27\t(B)29\n(C)28\t(D)24\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+printf("\nQ7.Which state of India has smallest area\n");
+printf("(A)Punjab\n(B)Sikkim\n(C)Goa\n(D)Tripura\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ8.The Ellora Cave in Maharashtra were built by\n");
+printf("(A)Rashtra Kutas\n(B)Cholas\n(C)Pallavas\n(D)Palas\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ9.Aryabhatta was India's renowned \n");
+printf("(A)Poet\n(B)Physicist\n(C)Mathematician\n(D)Medical Practitioner\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ10.Who built Char Minar \n");
+printf("(A)Ibrahim Qutub Shah\n(B)Ali Qutub Shah\n");
+printf("(C)Ibrahim Adil Shah-II\n");
+printf("(D)Ali Adil Shah\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ11.Who got the noble prize twice for science for the first time ? \n");
+printf("(A)Marie Curie\t");
+printf("(B)John bardeen\n");
+printf("(C)Linus Pauling");
+printf("(D)Frederick Sanger\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ12.Who is the developer of C language?\n");
+printf("(A)Dennis Ritchie\n");
+printf("(B)Bjarne Stroustrup\n");
+printf("(C)Charles Hawkings\n");
+printf("(D)Gui-Do-van-Rossum\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ13.Who is known as Father of Chemistry \n");
+printf("(A)Antoine Lavoisier\n");
+printf("(B)Dalton\n");
+printf("(C)Lewis Pasteur\n");
+printf("(D)Henry Mosley\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ14.What is capityal of Bangladesh\n");
+printf("(A)Itanagar\n");
+printf("(B)Dispur\n");
+printf("(C)Dhaka\n");
+printf("(D)Bhopal\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+
+printf("\nQ15.Who is the Maskot for Asian Games 1982 held in New Delhi\n");
+printf("(A)Appu\n");
+printf("(B)Hodori\n");
+printf("(C)PanPan\n");
+printf("(D)Dou-dou\n");
+printf("Choice=");
+scanf(" %c",&ch);
+Chk(ch);
+return 0;
+}
+void Chk(char ch)
+{k=i+1;
+  if(ch=='Q')
+{
+        printf("\nYour prize money: Rs.%lu",score);
+        exit(0);
+}
+
+if(ch=='H')
+{
+  if(j==0)
+{
+        printf("\nYou have already used your lifeline\n");
+        printf("Choice=");
+        scanf(" %c",&ch);
+        Chk(ch);
+        return ;
+}
+else
+{j=0;
+  if(arr[i]=='A')
+        printf("\n(B)and(D)are wrong Options");
+  else if(arr[i]=='B')
+        printf("(C)and(D)are wrong options");
+  else if(arr[i]=='C')
+        printf("(A)and(D)are wrong options");
+  else
+        printf("(A)and(B)are wrong options");
+        
+printf("\nChoice=");
+scanf(" %c",&ch);
+Chk(ch);
+return ;
+}
+}
+
+if(ch=='P')
+{  if(p==0)
+{
+        printf("\nYou have already used this lifeline\n");
+        printf("Choice=");
+        scanf(" %c",&ch);
+        Chk(ch);
+        return ;
+}
+else
+{p=0;
+        printf("\nChances for correctness\n");
+        ch1=arr[i];
+   if(ch1=='A')
+{
+        printf("80%--(A)");
+        printf("60%--(D)");
+        printf("40%--(B)");
+        printf("20%--(C)");
+}
+   else if(ch1=='B')
+{       printf("80%--(B)");
+        printf("60%--(A)");
+        printf("40%--(D)");
+        printf("20%--(C)");
+}
+   else if(ch1=='C')
+{       printf("80%--(C)");
+        printf("60%--(A)");
+        printf("40%--(B)");
+        printf("20%--(D)");
+}
+   else
+{       printf("80%--(D)");
+        printf("60%--(A)");
+        printf("40%--(B)");
+        printf("20%--(C)");
+}
+}
+printf("\nChoice=");
+scanf(" %c",&ch);
+Chk(ch);
+return ;
+}
+
+if(arr[i]==ch)
+{
+printf("Correct Answer!!!!");
+   if(k==1)
+         score=score+2500;
+   else if (k<=11)
+         score=score*2;
+   else if(k==11)
+         score=3000000;
+   else if(k<=14)
+         score=score+500000;                                                                                                       //Prize
+   else
+         score=10000000;
+printf("\nAmount = Rs.%lu\n ",score);
+i++;
+}
+
+else
+{  if(k>=5 && k<=9)
+         Reward=40000;
+   else if(k>=10&&k<=14)
+         Reward=1280000;
+   else if(k==15)
+         Reward=score;
+   else
+         Reward=0;
+printf("\nYou loose!!!!\n\aFinal Amount: %lu Rs.",Reward);
+exit(0);
+}
